@@ -33,5 +33,5 @@ exports.addUuid = functions.database
     const userData = snapshot.val();
     const name = `${userData.firstName} ${userData.lastName} ${uniqueIdentifier}`;
     const userId = uuidv5(name, uuidv5.DNS);
-    return userRef.update({ userId });
+    return userRef.update({ 'User Id': userId });
   });
